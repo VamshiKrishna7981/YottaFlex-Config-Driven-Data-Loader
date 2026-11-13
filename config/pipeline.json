@@ -1,0 +1,91 @@
+{
+  "pipeline": {
+    "name": "Configuration_test",
+    "description": "Configuration-driven orders data loader"
+  },
+  "source": {
+    "path": "data/orders_test.parquet",
+    "format": "parquet",
+    "delimiter": ",",
+    "header": true,
+    "encoding": "utf-8"
+  },
+    "database_retry": {
+    "enabled": true,
+    "max_attempts": 3,
+    "delay_seconds": 2
+  },
+  "schema": {
+    "columns": {
+      "order_id": {
+        "type": "VARCHAR",
+        "nullable": false
+      },
+      "customer_id": {
+        "type": "VARCHAR",
+        "nullable": false
+      },
+      "order_date": {
+        "type": "TIMESTAMP",
+        "nullable": false
+      },
+      "amount": {
+        "type": "DOUBLE",
+        "nullable": false
+      },
+      "status": {
+        "type": "VARCHAR",
+        "nullable": false
+      },
+      "updated_at": {
+        "type": "TIMESTAMP",
+        "nullable": true
+      }
+    }
+  },
+  "keys": {
+    "primary_key": [
+      "order_id"
+    ]
+  },
+  "target": {
+    "database": "data/warehouse.duckdb",
+    "table": "config_test_orders"
+  },
+  "load": {
+    "mode": "upsert"
+  },
+  "validation": {
+    "required_fields": [
+      "order_id",
+      "customer_id",
+      "order_date",
+      "amount",
+      "status"
+    ],
+    "allowed_values": {
+      "status": [
+        "PENDING",
+        "COMPLETED",
+        "CANCELLED",
+        "REFUNDED"
+      ]
+    },
+    "rules": {
+      "amount_minimum": 0
+    }
+  },
+  "quarantine": {
+    "enabled": true,
+    "path": "data/rejected_orders.csv"
+  },
+  "late_data": {
+    "event_time_column": "order_date",
+    "allowed_lateness_days": 7,
+    "policy": "accept_and_flag"
+  },
+  "logging": {
+    "enabled": true,
+    "table": "pipeline_runs"
+  }
+}

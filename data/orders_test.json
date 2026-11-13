@@ -1,0 +1,58 @@
+[
+    {
+        "order_id": "1001",
+        " customer_id": " C101",
+        " order_date": " 2026-11-13T10:00:00",
+        " amount": " 250.75",
+        " status": " COMPLETED",
+        " updated_at": " 2026-11-13T10:30:00"
+    },
+    {
+        "order_id": "1002",
+        " customer_id": " C102",
+        " order_date": " 2026-11-13T11:00:00",
+        " amount": " 500.00",
+        " status": " PENDING",
+        " updated_at": ""
+    },
+    {
+        "order_id": "1003",
+        " customer_id": " C103",
+        " order_date": " 2026-11-13T12:00:00",
+        " amount": " 125.50",
+        " status": " CANCELLED",
+        " updated_at": " 2026-11-13T12:30:00"
+    },
+    {
+        "order_id": "1004",
+        " customer_id": " C104",
+        " order_date": " 2026-11-13T13:00:00",
+        " amount": " 750.25",
+        " status": " COMPLETED",
+        " updated_at": ""
+    },
+    {
+        "order_id": "1005",
+        " customer_id": " C105",
+        " order_date": " 2026-11-13T14:00:00",
+        " amount": " 300.00",
+        " status": " REFUNDED",
+        " updated_at": " 2026-11-13T14:30:00"
+    },
+    {
+        "order_id": "1006",
+        " customer_id": "C106",
+        " order_date": "2026-11-13T15:00:00",
+        " amount": "-50.00",
+        " status": "PENDING",
+        " updated_at": "2026-11-13T15:30:00"
+    },
+    {
+        "order_id": "1007",
+        " customer_id": "C107",
+        " order_date": "2026-11-01T10:00:00",
+        " amount": "450.00",
+        " status": "PENDING",
+        " updated_at": "2026-11-13T16:00:00"
+    }
+]

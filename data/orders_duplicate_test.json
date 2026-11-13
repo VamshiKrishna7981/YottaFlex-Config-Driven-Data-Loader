@@ -1,0 +1,18 @@
+[
+  {
+    "order_id": "9001",
+    "customer_id": "C901",
+    "order_date": "2026-11-13T10:00:00",
+    "amount": 250.00,
+    "status": "COMPLETED",
+    "updated_at": "2026-11-13T10:30:00"
+  },
+  {
+    "order_id": "9001",
+    "customer_id": "C902",
+    "order_date": "2026-11-13T11:00:00",
+    "amount": 350.00,
+    "status": "PENDING",
+    "updated_at": "2026-11-13T11:30:00"
+  }
+]

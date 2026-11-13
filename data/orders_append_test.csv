@@ -1,0 +1,2 @@
+order_id,customer_id,order_date,amount,status,updated_at
+2001,CUST2001,2026-11-12 10:00:00,150.00,COMPLETED,2026-11-12 10:00:00
