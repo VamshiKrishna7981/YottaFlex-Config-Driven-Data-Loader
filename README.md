@@ -45,3 +45,12 @@ The pipeline displays source, valid, rejected, late and inserted record counts a
 Rejected records are saved to the configured quarantine CSV file.
 
 Logs are stored in outputs/logs/.
+
+## Additional Documentation
+
+- [AI Usage Disclosure and Prompt History](AI_USAGE_DISCLOSURE.md)
+- [Technical Design Document](TECHNICAL_DESIGN.md)
+
+## GitHub Repository
+
+https://github.com/VamshiKrishna7981/YottaFlex-Config-Driven-Data-Loader
